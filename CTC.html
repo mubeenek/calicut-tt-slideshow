@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>President's Club Briefing</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles reflecting Toastmasters International branding */
+        :root {
+            /* Official Toastmasters Colors */
+            --toast-blue: #004165;
+            --toast-gold: #F7B815;
+            --toast-light-blue: #e6f0f5; /* Lighter shade for backgrounds */
+        }
+
+        /* Essential styles to ensure the container fills the viewport and prevents body scrolling */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f3f5; /* Off-white/light gray background */
+            height: 100vh; /* Set full viewport height */
+            overflow: hidden; /* Prevent vertical scrolling on the body */
+        }
+        
+        .slide-container {
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide-content {
+            /* Removed height: 100% to allow content to flow naturally within the flexible container */
+            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1), 0 6px 15px -4px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* Updated Color Utility Classes */
+        .text-toast-blue { color: var(--toast-blue); }
+        .bg-toast-gold { background-color: var(--toast-gold); }
+        .border-toast-blue { border-color: var(--toast-blue); }
+        .hover\:bg-toast-blue:hover { background-color: var(--toast-blue); }
+        .bg-toast-light-blue { background-color: var(--toast-light-blue); }
+    </style>
+</head>
+<!-- Use h-screen and overflow-hidden on body and flex column layout for the app -->
+<body class="flex items-center justify-center p-4 sm:p-8 h-screen">
+
+    <div id="presentation-app" class="w-full max-w-6xl flex flex-col h-full">
+        <!-- Header with Logo -->
+        <header class="text-center mb-6 p-4 rounded-lg bg-white shadow-lg flex-shrink-0">
+            <!-- Toastmasters Logo -->
+            <img src="https://www.toastmasters.org/content/images/globals/toastmasters-logo@2x.png" 
+                 alt="Toastmasters International Logo" 
+                 class="h-10 sm:h-12 mx-auto mb-2" 
+                 onerror="this.style.display='none'">
+            
+            <h1 class="text-4xl font-extrabold text-gray-800">
+                <span class="text-toast-blue">Calicut</span> Toastmasters Guest Briefing
+            </h1>
+            <p class="text-lg text-gray-500 mt-1">Welcome to Our Community of Growth</p>
+        </header>
+
+        <!-- Slide Container: Uses flex-grow to take remaining vertical space. overflow-y-auto allows internal scrolling if content is too tall. -->
+        <div class="slide-container relative flex-grow overflow-y-auto">
+            
+            <!-- Slide 1: Welcome and The Core Idea -->
+            <div id="slide-1" class="slide-content p-8 md:p-12 rounded-xl bg-white border-t-8 border-toast-gold">
+                <p class="text-sm font-semibold text-toast-blue mb-4">SLIDE 1 / 3</p>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-gray-800 border-b pb-4 border-gray-100">
+                    A Warm Welcome: Conquer the Nerves
+                </h2>
+                
+                <div class="space-y-6">
+                    <!-- Core Message 1 -->
+                    <div class="flex p-4 bg-toast-light-blue rounded-lg border-l-4 border-toast-blue">
+                        <i data-lucide="Frown" class="w-6 h-6 text-toast-blue mr-4 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-700 mb-1">You Are Not Alone</h3>
+                            <p class="text-gray-600">The fear of public speaking is common. We understand the struggle to articulate ideas clearly under pressure in professional or personal settings.</p>
+                        </div>
+                    </div>
+
+                    <!-- Core Message 2 -->
+                    <div class="flex p-4 bg-toast-light-blue rounded-lg border-l-4 border-toast-blue">
+                        <i data-lucide="Shield" class="w-6 h-6 text-toast-blue mr-4 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-700 mb-1">Our Simple Solution</h3>
+                            <p class="text-gray-600">We turn those nerves into **confidence** by providing a **safe, supportive environment** where taking risks is encouraged and mistakes are celebrated as lessons.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Core Message 3 -->
+                    <div class="flex p-4 bg-toast-light-blue rounded-lg border-l-4 border-toast-blue">
+                        <i data-lucide="ClipboardCheck" class="w-6 h-6 text-toast-blue mr-4 flex-shrink-0 mt-1"></i>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-700 mb-1">Core Philosophy: Learning by Doing</h3>
+                            <p class="text-gray-600">You learn and grow by actively participating in structured meeting roles every week. We ensure your development moves at **your comfortable pace**.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: The Legacy & The Method -->
+            <div id="slide-2" class="slide-content p-8 md:p-12 rounded-xl bg-white border-t-8 border-toast-gold hidden absolute top-0 w-full">
+                <p class="text-sm font-semibold text-toast-blue mb-4">SLIDE 2 / 3</p>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-gray-800 border-b pb-4 border-gray-100">
+                    The Legacy & The Toastmasters Method
+                </h2>
+                
+                <div class="space-y-8">
+                    <div class="bg-toast-gold/20 p-6 rounded-xl border-l-4 border-toast-gold">
+                        <h3 class="font-extrabold text-2xl text-gray-700 mb-2 flex items-center">
+                            <i data-lucide="Trophy" class="w-6 h-6 mr-2 text-toast-blue"></i>
+                            Toastmasters International (TI)
+                        </h3>
+                        <p class="text-gray-800">Founded by **Dr. Ralph C. Smedley** in 1924, TI is a global non-profit educational organization dedicated to empowering individuals in communication and leadership, spanning thousands of clubs worldwide.</p>
+                    </div>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-700 mt-6 mb-4">Three Pillars of Growth</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-gray-100 p-5 rounded-lg text-center border-b-4 border-toast-blue">
+                            <i data-lucide="Mic" class="w-8 h-8 mx-auto text-toast-blue mb-2"></i>
+                            <p class="text-xl font-bold text-gray-800">1. Prepared Speeches</p>
+                            <p class="text-sm text-gray-600 mt-1">Structured projects (Pathways) to master specific skills like storytelling and vocal variety.</p>
+                        </div>
+                        <div class="bg-gray-100 p-5 rounded-lg text-center border-b-4 border-toast-blue">
+                            <i data-lucide="Zap" class="w-8 h-8 mx-auto text-toast-blue mb-2"></i>
+                            <p class="text-xl font-bold text-gray-800">2. Impromptu Speaking</p>
+                            <p class="text-sm text-gray-600 mt-1">The challenging and fun **Table Topics**—training you to think fast and speak clearly on the spot.</p>
+                        </div>
+                        <div class="bg-gray-100 p-5 rounded-lg text-center border-b-4 border-toast-blue">
+                            <i data-lucide="MessageSquareHeart" class="w-8 h-8 mx-auto text-toast-blue mb-2"></i>
+                            <p class="text-xl font-bold text-gray-800">3. Constructive Feedback</p>
+                            <p class="text-sm text-gray-600 mt-1">Our secret weapon: Honest, gentle, and actionable **Evaluations** that fuels your rapid, targeted growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Growth and Next Steps -->
+            <div id="slide-3" class="slide-content p-8 md:p-12 rounded-xl bg-white border-t-8 border-toast-gold hidden absolute top-0 w-full">
+                <p class="text-sm font-semibold text-toast-blue mb-4">SLIDE 3 / 3</p>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-gray-800 border-b pb-4 border-gray-100">
+                    What You Gain & Your Next Step
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <!-- Gain 1 -->
+                    <div class="bg-green-50 p-5 rounded-xl border-l-4 border-green-600">
+                        <div class="flex items-center mb-2">
+                            <i data-lucide="TrendingUp" class="w-6 h-6 text-green-600 mr-2"></i>
+                            <h3 class="font-bold text-xl text-gray-700">Career & Professional Edge</h3>
+                        </div>
+                        <p class="text-gray-600">Develop **leadership**, **delegation**, and **structured communication** skills crucial for career success. These abilities are universally recognized as the fastest track to professional advancement.</p>
+                    </div>
+
+                    <!-- Gain 2 -->
+                    <div class="bg-green-50 p-5 rounded-xl border-l-4 border-green-600">
+                        <div class="flex items-center mb-2">
+                            <i data-lucide="Users" class="w-6 h-6 text-green-600 mr-2"></i>
+                            <h3 class="font-bold text-xl text-gray-700">A Supportive Community</h3>
+                        </div>
+                        <p class="text-gray-600">You gain a local network of peers in Calicut who are all invested in your personal and professional success. We celebrate every win, big or small, together.</p>
+                    </div>
+                </div>
+                
+                <h3 class="text-2xl font-semibold text-gray-700 mt-6 mb-4">Your Next Steps</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-gray-100 p-4 rounded-lg flex items-center border-l-4 border-gray-400">
+                        <i data-lucide="Eye" class="w-6 h-6 text-gray-700 mr-3"></i>
+                        <div>
+                            <p class="text-lg font-bold text-toast-blue">Stay and Observe</p>
+                            <p class="text-sm text-gray-600">We invite you to visit 2-3 times as our guest—no cost, no obligation, just pure observation and learning.</p>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg flex items-center border-l-4 border-gray-400">
+                        <i data-lucide="HelpCircle" class="w-6 h-6 text-gray-700 mr-3"></i>
+                        <div>
+                            <p class="text-lg font-bold text-toast-blue">Ask Us Anything!</p>
+                            <p class="text-sm text-gray-600">Please connect with our **Vice President Membership (VPM)** or me after the meeting. We are here to answer all your questions!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Navigation Controls: Uses flex-shrink-0 to maintain its position -->
+        <div class="flex justify-between mt-auto p-4 bg-white rounded-xl shadow-lg flex-shrink-0">
+            <button id="prev-button" onclick="navigateSlide(-1)" class="px-6 py-3 bg-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-300 transition duration-150 flex items-center disabled:opacity-50 disabled:cursor-not-allowed">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                Previous
+            </button>
+            <span id="slide-indicator" class="text-lg font-bold text-gray-600 self-center">1 / 3</span>
+            <button id="next-button" onclick="navigateSlide(1)" class="px-6 py-3 bg-toast-blue text-white font-semibold rounded-lg hover:opacity-80 transition duration-150 flex items-center disabled:opacity-50 disabled:cursor-not-allowed" style="background-color: var(--toast-blue);">
+                Next
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const slides = [
+            document.getElementById('slide-1'),
+            document.getElementById('slide-2'),
+            document.getElementById('slide-3')
+        ];
+        let currentSlideIndex = 0;
+
+        const prevButton = document.getElementById('prev-button');
+        const nextButton = document.getElementById('next-button');
+        const indicator = document.getElementById('slide-indicator');
+
+        // Function to update the view
+        function updateSlideView() {
+            slides.forEach((slide, index) => {
+                slide.classList.add('hidden');
+                slide.style.opacity = '0';
+                
+                if (index === currentSlideIndex) {
+                    slide.classList.remove('hidden');
+                    // Use a slight delay for the opacity transition
+                    setTimeout(() => { slide.style.opacity = '1'; }, 10);
+                }
+            });
+
+            // Update navigation
+            prevButton.disabled = currentSlideIndex === 0;
+            nextButton.disabled = currentSlideIndex === slides.length - 1;
+            indicator.textContent = `${currentSlideIndex + 1} / ${slides.length}`;
+            
+            // Re-render Lucide icons on slide change
+            if (typeof lucide !== 'undefined' && lucide.createIcons) {
+                lucide.createIcons();
+            }
+        }
+
+        // Function to handle navigation
+        function navigateSlide(direction) {
+            const newIndex = currentSlideIndex + direction;
+            if (newIndex >= 0 && newIndex < slides.length) {
+                currentSlideIndex = newIndex;
+                updateSlideView();
+            }
+        }
+
+        // Initialize the view on load
+        window.onload = updateSlideView;
+    </script>
+</body>
+</html>
